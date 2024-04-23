@@ -10,6 +10,9 @@ import bodyParser from "body-parser"
 // const mongoose = require("mongoose");
 import mongoose from "mongoose";
 mongoose.connect("mongodb+srv://databaseparking:champ1234@cluster0.5fheemo.mongodb.net/parkingsystem");
+app.use("/",(req,res)=>{
+  res.json({message: "Hello From express app"})
+})
 
 //   app.use = express.json();
 app.use(cors());
