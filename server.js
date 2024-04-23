@@ -15,9 +15,9 @@ mongoose.connect("mongodb+srv://databaseparking:champ1234@cluster0.5fheemo.mongo
 app.use(cors());
 app.use(bodyParser.json());
 
-app.use("/",(req,res)=>{
-  res.json({message: "Hello From express app"})
-})
+// app.use("/",(req,res)=>{
+//   res.json({message: "Hello From express app"})
+// })
 
 var shopInfoSchema = mongoose.Schema(
     {},
