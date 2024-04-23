@@ -1,10 +1,14 @@
-const express = require("express");
+// const express = require("express");
+import express from "express"
 const app = express();
 const PORT = process.env.PORT || 5000;
-const cors = require('cors');
-const bodyParser = require('body-parser');
+// const cors = require('cors');
+import cors from 'cors'
+// const bodyParser = require('body-parser');
+import bodyParser from "body-parser"
 
-const mongoose = require("mongoose");
+// const mongoose = require("mongoose");
+import mongoose from "mongoose";
 mongoose.connect("mongodb+srv://databaseparking:champ1234@cluster0.5fheemo.mongodb.net/parkingsystem");
 
 //   app.use = express.json();
