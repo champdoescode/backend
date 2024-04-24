@@ -10,9 +10,9 @@ import bodyParser from "body-parser"
 // const mongoose = require("mongoose");
 import mongoose from "mongoose";
 mongoose.connect("mongodb+srv://databaseparking:champ1234@cluster0.5fheemo.mongodb.net/parkingsystem");
-app.use("/",(req,res)=>{
-  res.json({message: "Hello From express app"})
-})
+// app.use("/",(req,res)=>{
+//   res.json({message: "Hello From express app"})
+// })
 
 //   app.use = express.json();
 app.use(cors());
@@ -69,6 +69,7 @@ var shopInfoSchema = mongoose.Schema(
     const {email, password} = req.body;
     try {
         const dataget = await LoginInfo.find({email, password})
+        console.log(dataget);
          res.json(dataget);
     } catch (error) {
       res.status(500).json({ message: error.message });
